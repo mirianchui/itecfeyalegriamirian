@@ -1,0 +1,585 @@
+   <!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITEC FE Y ALEGRÍA</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+   
+ 
+   
+    @keyframes colorChange {
+      0% { background-color: #3498db; }
+      50% { background-color: #9b59b6; }
+      100% { background-color: #e74c3c; }
+    }
+    
+.form-container {
+      display: none; /* Ocultar por defecto */
+      animation: fadeIn 0.7s ease-in-out;
+      padding: 10px;
+      
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+    li{ padding-left: 30px;}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .color-changing-bg {/* barra deinicio */
+      animation: colorChange 4s infinite alternate;
+      padding:5px;
+      text-align: center;
+     
+}
+
+.login-container {
+      padding: 30px;
+      border-radius: 10px;
+      margin: auto;
+      width: 50%;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .social-icons i {
+      font-size: 30px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+    .bg-footer {/* contactanos*/
+      background-size: cover;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .menu-button {
+       border: none; /* Sin borde */
+      margin: 5px 0;
+      transition: transform 0.3s;
+    }
+    .menu-button:hover {
+      transform: scale(1.1);
+    }
+    .menu-button:active {
+      transform: scale(0.9); /* Efecto al hacer clic */
+    }
+  #formLogin{font-family:cursive;
+
+         background: rgba(44,62,80,0.2);
+        
+        border: 5px thistle solid;
+        margin: auto;
+        width: 720px;
+        height: 520px;
+        text-align: center;
+        border-radius:70px;
+        margin-top: 40px;
+
+        box-shadow: 8px 10px 17px 10px black;
+        cursor: pointer;
+        color: white;
+}
+ 
+
+        h1, h2 {
+            text-align: center;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+    
+
+a {
+  text-decoration: none; 
+  color: white;
+  font-size: 1em;
+ }
+ a:hover {
+  text-decoration: none; 
+  color:purple;
+  
+ }
+
+
+
+body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+         :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #f59e0b;
+            --accent-color: #a855f7;
+            --success-color: #10b981;
+            --orange-color: #f97316;
+            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --gradient-2: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            --gradient-3: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            --gradient-4: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-5: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --hero-gradient: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(168, 85, 247, 0.8) 30%, rgba(245, 158, 11, 0.8) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Hero Section */
+        .hero-section {
+            height: 80vh;
+            background: url('img/insti.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-gradient);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+.btn-gradient-yellow {
+            
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation:  0% { background-color: #3498db; }
+      50% { background-color: #9b59b6; }
+      100% { background-color: #e74c3c; } 4s infinite alternate;
+    }
+      text-align: center;
+        }
+
+        .btn-gradient-yellow:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+         .navbar {
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+.nav-link {
+            color: #666 !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            background: rgba(59, 130, 246, 0.1);
+        }
+ section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Hidden sections for navigation */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        #home.active {
+            display: block;
+        }
+        /* Career Cards */
+        .career-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .career-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .career-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .career-content {
+            padding: 1.5rem;
+        }
+        h6 { font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            }
+
+
+            /* Cards */
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .icon-primary { background: var(--gradient-1); }
+        .icon-secondary { background: var(--gradient-5); }
+        .icon-success { background: var(--gradient-4); }
+
+        /* Action Cards */
+        .action-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .action-card-purple {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+        }
+
+        .action-card-green {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            background: var(--gradient-1);
+            color: white;
+            padding: 4rem 0;
+            border-radius: 24px;
+            margin: 4rem 0;
+        }
+  </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+       <div class="container">
+           <img src="img/logo.png" width="30%" ><h6>ITEC FE Y ALEGRÍA</h6>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showSection('home')">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscripcionesdos.html" onclick="showSection('inscripciones')">
+                            <i class="fas fa-pencil-alt me-1"></i>Inscripciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logintres.html" onclick="showSection('login')">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanoscuatro.html" onclick="showSection('contacto')">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotrosseis.html" onclick="showSection('nosotros')">
+                            <i class="fas fa-users me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrerascinco.html" onclick="showSection('carreras')">
+                            <i class="fas fa-graduation-cap me-1"></i>Carreras
+                        </a>
+                    </li>
+                     <li class="nav-item" >
+                      <a  class="nav-link"  href="ar4.html" onclick="showamigos()" >
+                        <i class="fas fa-users"></i> Sitios amigos
+                      </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Home Section -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">ITEC FE Y ALEGRÍA</h1>
+                <p class="hero-subtitle fade-in">Instituto Técnico Comercial - Formando el futuro con fe y alegría</p>
+                <a href="inscripcionesdos.html" onclick="showSection('inscripciones')" class="btn-gradient-yellow color-changing-bg">
+                    <i class="fas fa-graduation-cap me-2"></i>Inscríbete Ahora
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="container">
+            <div class="section-title">
+                <h2>Bienvenido a ITEC FE Y ALEGRÍA</h2>
+                <p>Formamos profesionales de calidad con valores sólidos, preparándolos para los desafíos del mundo moderno con fe, esperanza y alegría en cada paso de su formación académica.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="feature-icon icon-primary">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Educación de Calidad</h3>
+                        <p class="text-muted">Docentes especializados y metodologías modernas para tu formación profesional</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="feature-icon icon-secondary">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Tecnología Avanzada</h3>
+                        <p class="text-muted">Laboratorios equipados con tecnología de última generación</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="feature-icon icon-success">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Inserción Laboral</h3>
+                        <p class="text-muted">Alta empleabilidad y conexiones con el sector empresarial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Quick Actions -->
+        <section class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="carrerascinco.html" onclick="showSection('carreras')" class="action-card">
+                        <div class="text-center">
+                            <i class="fas fa-graduation-cap" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3>Conoce Nuestras Carreras</h3>
+                            <p>Descubre las opciones de formación profesional que tenemos para ti</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="inscripcionesdos.html" onclick="showSection('inscripciones')" class="action-card action-card-purple">
+                        <div class="text-center">
+                            <i class="fas fa-pencil-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3>Inscríbete Ahora</h3>
+                            <p>Inicia tu proceso de inscripción y forma parte de nuestra comunidad</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="contactanoscuatro.html" onclick="showSection('contacto')" class="action-card action-card-green">
+                        <div class="text-center">
+                            <i class="fas fa-envelope" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3>Contáctanos</h3>
+                            <p>¿Tienes preguntas? Estamos aquí para ayudarte</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+<!
+ 
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function showInicio() {
+      resetContainers();
+      document.getElementById('inicio').style.display = 'block';
+    }
+
+    function showInscripciones() {
+      resetContainers();
+      document.getElementById('inscripciones').style.display = 'block';
+    }
+
+    function showLogin() {
+      resetContainers();
+      document.getElementById('formLogin').style.display = 'block';
+    }
+
+    function showContacto() {
+      resetContainers();
+      document.getElementById('contacto').style.display = 'block';
+    }
+
+    function showNosotros() {
+      resetContainers();
+      document.getElementById('nosotros').style.display = 'block';
+    }
+
+    function showCarreras() {
+      resetContainers();
+      document.getElementById('carreras').style.display = 'block';
+    }
+
+    function resetContainers() {
+      document.querySelectorAll('.form-container').forEach(el => el.style.display = 'none');
+    }
+
+
+   
+function login() {
+      alert("Se llendo el Formulario exitosamente!"); 
+
+
+       
+      
+   
+ document.getElementById('formLogin').style.display = 'none';
+       
+      
+      document.getElementById('calificaciones').style.display = 'block'; // Mostrar calificaciones
+    }
+
+     function togglePassword() {
+        const passField = document.getElementById("password");
+        const icon = document.getElementById("ojo");
+        const monito = document.getElementById("monito");
+
+        if (passField.type === "password") {
+            passField.type = "text";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+            monito.src = "img/oabierto.png"; // Cambiar a imagen de ojo abierto
+        } else {
+            passField.type = "password";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+            monito.src = "img/ocerrado.png"; // Cambiar a imagen de ojo cerrado
+        }
+    }
+
+    function toggleMonito() {
+      const password = document.getElementById("password").value;
+      document.getElementById("monito").style.transform = password.length > 0 ? "scale(1.1)" : "scale(1)";
+    }
+
+    // Mostrar la sección principal al cargar
+    showInicio(); // Cambiar según la sección inicial deseada
+  </script>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

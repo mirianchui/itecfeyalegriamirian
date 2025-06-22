@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITEC FE Y ALEGRÍA</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url('https://es.pinterest.com/pin/45739752460737215/') no-repeat center center fixed;/* Imagen de fondo */
+      background-size: cover;
+      transition: transform 0.7s;
+    }
+    .header {
+     background: url('img/insti.jpg') no-repeat center center; 
+      background-size: cover;
+      height: 300px;
+      color: white;
+      padding: 15px 20px;
+      font-size: 16px;
+      
+      cursor: pointer;
+      transition: transform 0.3s, color 0.3s;
+     
+      
+    }
+    @keyframes colorChange {
+      0% { background-color: #3498db; }
+      50% { background-color: #9b59b6; }
+      100% { background-color: #e74c3c; }
+    }
+    
+.form-container {
+      display: none; /* Ocultar por defecto */
+      animation: fadeIn 0.7s ease-in-out;
+      padding: 10px;
+      
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+    li{ padding-left: 30px;}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .color-changing-bg {/* barra deinicio */
+      animation: colorChange 4s infinite alternate;
+      padding:5px;
+      text-align: center;
+     
+}
+
+.login-container {
+      padding: 30px;
+      border-radius: 10px;
+      margin: auto;
+      width: 50%;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .social-icons i {
+      font-size: 30px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+    .bg-footer {/* contactanos*/
+      background-size: cover;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .menu-button {
+       border: none; /* Sin borde */
+      margin: 5px 0;
+      transition: transform 0.3s;
+    }
+    .menu-button:hover {
+      transform: scale(1.1);
+    }
+    .menu-button:active {
+      transform: scale(0.9); /* Efecto al hacer clic */
+    }
+  #formLogin{font-family:cursive;
+
+         background: rgba(44,62,80,0.2);
+        
+        border: 5px thistle solid;
+        margin: auto;
+        width: 720px;
+        height: 520px;
+        text-align: center;
+        border-radius:70px;
+        margin-top: 40px;
+
+        box-shadow: 8px 10px 17px 10px black;
+        cursor: pointer;
+        color: white;
+}
+ 
+
+        h1, h2 {
+            text-align: center;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+    
+
+
+  </style>
+</head>
+
+
+<body img src="https://es.pinterest.com/pin/104779128827708623/.gif">
+
+  <div class="header">
+
+    
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light color-changing-bg">
+     <img src="img/logo.png" width="5%" ><h5>ITEC FE Y ALEGRÍA</h5>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="instituto.html">
+      	<button class="nav-link btn btn-link text-white menu-button" onclick="showInicio()"><i class="fas fa-home"></i> Inicio</button></li>
+
+      <li class="nav-item"><a href="inscripcionesdos.html">
+      	<button class="nav-link btn btn-link text-white menu-button" onclick="showInscripciones()"><i class="fas fa-pencil-alt"></i> Inscripciones</button></li>
+
+      <li class="nav-item"><a href="logintres.html">
+      	<button class="nav-link btn btn-link text-white menu-button" onclick="showLogin()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
+
+      <li class="nav-item"><a href="lcontactanoscuatro.html">
+      	<button class="nav-link btn btn-link text-white menu-button" onclick="showContacto()"><i class="fas fa-envelope"></i> Contáctanos</button></li>
+
+      <li class="nav-item"><a href="carrerascinco.html">
+      	<button class="nav-link btn btn-link text-white menu-button" onclick="showNosotros()"><i class="fas fa-users"></i> Nosotros</button></li>
+      <li class="nav-item"><a href="nosotrosseis.html"><button class="nav-link btn btn-link text-white menu-button" onclick="showCarreras()"><i class="fas fa-graduation-cap"></i> Carreras</button></li>
+    </ul>
+  </nav>
+  
+
+  
+ 
+  
+
+    <!-- Sección de Inscripciones -->
+    <div id="inscripciones" class="form-container login-container">
+      <h2>Formulario de Inscripción</h2>
+     <h1>INSTITUTO TÉCNICO COMERCIAL "FE Y ALEGRÍA"</h1>
+    
+
+    <h3>1. DATOS PERSONALES</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Complemento</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Tipo DCI</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Expedido</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Nombres</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Paterno</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Materno</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Fecha de Nacimiento</th>
+            <td><input type="date" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Estado Civil</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Sexo</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>País de Nacimiento</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Departamento de Nacimiento</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Provincia</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Municipio</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Comunidad</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Localidad</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Dirección</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Zona</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Celular</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Correo</th>
+            <td><input type="email" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Idioma</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Tipo de Sangre</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Número de Libreta Militar</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Procedencia</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+    </table>
+
+    <h3>2. FORMACIÓN ACADÉMICA</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Unidad Educativa de Formación</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Grado Obtenido</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Serie y Número de Diploma de Bachiller</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Fecha de Emisión</th>
+            <td><input type="date" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Carrera</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Nivel Paralelo</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+    </table>
+
+    <h3>3. DATOS COMPLEMENTARIOS</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>¿Trabaja?</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>¿Tiene alguna discapacidad?</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Doble Nacionalidad</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+    </table>
+
+    <h3>4. DATOS DE VERIFICACIÓN</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Fecha de Verificación</th>
+            <td><input type="date" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>Responsable de Verificación</th>
+            <td><input type="text" class="form-control"></td>
+        </tr>
+    </table>
+
+    <div class="text-center">
+        <button class="btn btn-primary" onclick="enviar();">Enviar Inscripción</button>
+    </div>
+    </div>
+<script>
+    
+    function showHorario() {
+        // Lógica para mostrar el horario
+        alert("Mostrando el horario");
+    }
+
+    function showCalificaciones() {
+        // Lógica para mostrar las calificaciones
+        alert("Mostrando calificaciones");
+    }
+
+    function resetContainers() {
+        // Aquí puedes agregar lógica para cerrar sesión o limpiar formularios
+        alert("Has salido exitosamente.");
+    }
+
+    function showInicio() {
+        // Lógica para mostrar la página principal
+        alert("Volviendo a la página principal");
+    }
+</script>
+
+<style>
+    .form-container {
+        width: 900px; /* Ancho del formulario */
+        margin: auto; /* Centrar el formulario */
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .button-row button {
+        margin: 5px; /* Espaciado entre botones */
+    }
+</style>
+
+    <div id="calificaciones" class="form-container" style="margin: auto;width:900px; ">
+      <button class="btn btn-danger" onclick="showInicio()" style="margin: auto;">  Ir a la página principal</button>
+      <button class="btn btn-secondary" onclick="resetContainers()"  style="margin: auto;">Salir</button>
+      <h2>Calificaciones</h2>
+      <div class="form-group"><label>Estudiante:</label><input class="form-control"/></div>
+      <div class="form-group"><label>Curso:</label><input class="form-control"/></div>
+      <div class="form-group"><label>Carrera:</label><input class="form-control"/></div>
+      <table class="table table-bordered bg-white">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Código</th>
+            <th>Asignatura</th>
+            <th>Bimestre 1</th>
+            <th>Bimestre 2</th>
+            <th>Bimestre 3</th>
+            <th>Bimestre 4</th>
+            <th>Nota Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><input class="form-control"/></td>
+            <td><input class="form-control"/></td>
+            <td><input class="form-control"/></td>
+            <td><input class="form-control"/></td>
+            <td><input class="form-control"/></td>
+            <td><input class="form-control"/></td>
+            <td><input class="form-control"/></td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+
+ 
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function showInicio() {
+      resetContainers();
+      document.getElementById('inicio').style.display = 'block';
+    }
+
+    function showInscripciones() {
+      resetContainers();
+      document.getElementById('inscripciones').style.display = 'block';
+    }
+
+    function showLogin() {
+      resetContainers();
+      document.getElementById('formLogin').style.display = 'block';
+    }
+
+    function showContacto() {
+      resetContainers();
+      document.getElementById('contacto').style.display = 'block';
+    }
+
+    function showNosotros() {
+      resetContainers();
+      document.getElementById('nosotros').style.display = 'block';
+    }
+
+    function showCarreras() {
+      resetContainers();
+      document.getElementById('carreras').style.display = 'block';
+    }
+
+    function resetContainers() {
+      document.querySelectorAll('.form-container').forEach(el => el.style.display = 'none');
+    }
+
+
+   
+function login() {
+      alert("Se llendo el Formulario exitosamente!"); 
+
+
+       
+      
+   
+ document.getElementById('formLogin').style.display = 'none';
+       
+      
+      document.getElementById('calificaciones').style.display = 'block'; // Mostrar calificaciones
+    }
+
+     function togglePassword() {
+        const passField = document.getElementById("password");
+        const icon = document.getElementById("ojo");
+        const monito = document.getElementById("monito");
+
+        if (passField.type === "password") {
+            passField.type = "text";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+            monito.src = "img/oabierto.png"; // Cambiar a imagen de ojo abierto
+        } else {
+            passField.type = "password";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+            monito.src = "img/ocerrado.png"; // Cambiar a imagen de ojo cerrado
+        }
+    }
+
+    function toggleMonito() {
+      const password = document.getElementById("password").value;
+      document.getElementById("monito").style.transform = password.length > 0 ? "scale(1.1)" : "scale(1)";
+    }
+
+    // Mostrar la sección principal al cargar
+    showInicio(); // Cambiar según la sección inicial deseada
+  </script>
+
+    <script src="js/bootstrap.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Registro e Inicio de Sesión</title>
+    <style type="text/css">
+        form {
+            width: 320px;
+            background: linear-gradient(to right, lightblue, lightgreen);
+            margin: auto;
+            border-radius: 5px 10px 25px 4px;
+            margin-top: 50px;
+            box-shadow: 7px 10px 20px 5px lightblue;
+        }
+        #todo {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        td {
+            padding-left: 15px;
+        }
+        #enlace:hover {
+            color: white;
+        }
+        #enlace, #enl {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <div id="todo">
+            <center>
+                <label id="titulo">ESCRIBE TUS DATOS</label>
+            </center>
+            <br>
+            <table>
+                <tr>
+                    <td><label>NOMBRE</label></td>
+                    <td><input type="text" name="nombre" id="aa" placeholder="NOMBRE" minlength="3" maxlength="15" required></td>
+                </tr>
+                <tr>
+                    <td><label>CLAVE</label></td>
+                    <td><input type="password" name="clave" id="bb" placeholder="CLAVE" minlength="7" maxlength="15" required></td>
+                </tr>
+                <tr>
+                    <td><label>CORREO</label></td>
+                    <td><input type="email" name="correo" id="cc" placeholder="CORREO" required></td>
+                </tr>
+                <tr>
+                    
+
+                    <td><button type="submit"><a href="#registro" onclick="iniciarSesion();" id="enl">Aceptar</button></td>
+                        <td><button type="reset"><a href="#registro" id="enl">Limpiar</button></td>
+                </tr>
+                <tr>
+                    <td><a href="#registro" onclick="registrar();" id="enlace">Registrarse</a></td>
+                    <td><a href="mailto:chuiacebedomirian@gmail.com" id="enlace"> | Olvide mi contraseña</a></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+    <script type="text/javascript">
+        function registrar() {
+            var nombre = document.getElementById('aa').value;
+            var clave = document.getElementById('bb').value;
+            var correo = document.getElementById('cc').value;
+
+            if (nombre === "" || clave === "" || correo === "") {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+            // Guardar datos en localStorage
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('clave', clave);
+            localStorage.setItem('correo', correo);
+
+            alert("Registro exitoso. Puedes iniciar sesión ahora.");
+        }
+
+        function iniciarSesion() {
+            var nombre = document.getElementById('aa').value;
+            var clave = document.getElementById('bb').value;
+            var correo = document.getElementById('cc').value;
+
+            // Validar inicio de sesión
+            if (nombre === localStorage.getItem('nombre') && clave === localStorage.getItem('clave') && correo === localStorage.getItem('correo')) {
+                alert("Inicio de sesión exitoso.");
+                window.location.href = "inicio.html"; 
+            } else {
+                alert("Nombre o clave incorrectos.");
+            }
+        }
+    </script>

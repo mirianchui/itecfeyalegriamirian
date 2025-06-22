@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITEC FE Y ALEGRÍA</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+   <style>
+ #titulo{
+	color:darkred;
+}
+
+
+
+br{
+  margin: 30px;
+}
+
+
+
+
+ h1{
+ 	color: white;
+    }
+
+#logo{
+	padding: 25px;
+	border-radius:50%; 
+	width: 200px;
+}
+
+img{
+  margin: 25px;
+  border-radius:124px; 
+	}
+    
+img:hover{
+    transition: 1s;
+    border-radius:12px; 
+ }
+     
+#inc{
+	width:300px; 
+	border-radius:30px; 
+}
+
+#inc:hover{
+	transition: 01s;
+    border-radius:124px;
+    
+ }
+
+
+
+u{
+	color:black;
+}
+ hr{
+ margin: 28px;
+}
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url('https://i.pinimg.com/originals/63/99/d7/6399d7ea92a326834faa2326884bba44.gif') no-repeat center center fixed;/* Imagen de fondo */
+      background-size: cover;
+      transition: transform 0.7s;
+    }
+    .header {
+     background: url('img/insti.jpg') no-repeat center center; 
+      background-size: cover;
+      height: 300px;
+      color: white;
+      padding: 15px 20px;
+      font-size: 16px;
+      
+      cursor: pointer;
+      transition: transform 0.3s, color 0.3s;
+     
+      
+    }
+    @keyframes colorChange {
+      0% { background-color: #3498db; }
+      50% { background-color: #9b59b6; }
+      100% { background-color: #e74c3c; }
+    }
+    
+.form-container {
+     
+      animation: fadeIn 0.7s ease-in-out;
+      padding: 10px;
+      
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+    li{ padding-left: 30px;}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .color-changing-bg {/* barra deinicio */
+      animation: colorChange 4s infinite alternate;
+      padding:5px;
+      text-align: center;
+     
+}
+
+
+    .social-icons i {
+      font-size: 30px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+    .menu-button {
+       border: none; /* Sin borde */
+      margin: 5px 0;
+      transition: transform 0.3s;
+    }
+    .menu-button:hover {
+      transform: scale(1.1);
+    }
+    .menu-button:active {
+      transform: scale(0.9); /* Efecto al hacer clic */
+    }
+  #car{
+ border-radius:12px; 
+ }
+
+        h1, h2 {
+            text-align: center;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+    
+a {
+  text-decoration: none; 
+  color: white;
+  font-size: 1em;
+ }
+ a:hover {
+  text-decoration: none; 
+  color:purple;
+  
+ }
+  body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+         :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #f59e0b;
+            --accent-color: #a855f7;
+            --success-color: #10b981;
+            --orange-color: #f97316;
+            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --gradient-2: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            --gradient-3: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            --gradient-4: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-5: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --hero-gradient: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(168, 85, 247, 0.8) 30%, rgba(245, 158, 11, 0.8) 100%);
+        }
+    .navbar {
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+.nav-link {
+            color: #666 !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            background: rgba(59, 130, 246, 0.1);
+        }
+ section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Hidden sections for navigation */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        #home.active {
+            display: block;
+        }
+        /* Career Cards */
+        .career-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .career-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .career-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .career-content {
+            padding: 1.5rem;
+        }
+        h6 { font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            }
+
+
+            /* Cards */
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .icon-primary { background: var(--gradient-1); }
+        .icon-secondary { background: var(--gradient-5); }
+        .icon-success { background: var(--gradient-4); }
+
+        /* Action Cards */
+        .action-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            color: white;
+            text-decoration: none;
+        }
+.form-container {
+     
+      animation: fadeIn 0.7s ease-in-out;
+      padding: 10px;
+      
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+    li{ padding-left: 30px;}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .color-changing-bg {/* barra deinicio */
+      animation: colorChange 4s infinite alternate;
+      padding:5px;
+      text-align: center;
+     
+}
+
+.login-container {
+      padding: 30px;
+      border-radius: 10px;
+      margin: auto;
+      width: 50%;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .social-icons i {
+      font-size: 30px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+    .bg-footer {/* contactanos*/
+      background-size: cover;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    .menu-button:hover {
+      transform: scale(1.1);
+    }
+    .menu-button:active {
+      transform: scale(0.9); /* Efecto al hacer clic */
+    }
+  #formLogin{font-family:cursive;
+
+         background: rgba(44,62,80,0.2);
+        
+        border: 5px thistle solid;
+        margin: auto;
+        width: 720px;
+        height: 520px;
+        text-align: center;
+        border-radius:70px;
+        margin-top: 40px;
+
+        box-shadow: 8px 10px 17px 10px black;
+        cursor: pointer;
+        color: white;
+}
+ 
+
+        h1, h2 {
+            text-align: center;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+   
+#in{
+  text-decoration: none; 
+  color: white;
+  font-size: 1em;
+ }
+#in:hover {
+  text-decoration: none; 
+  color:purple;
+ 
+ }
+ 
+ .btn-gradient-purple {
+            background: var(--gradient-2);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            
+    
+        }
+
+        .btn-gradient-purple:hover {
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+            color: black;
+            text-decoration: none;
+
+
+        }
+            
+    
+
+      text-align: center;
+       
+
+        /* Statistics Section */
+        .stats-section {
+            background: var(--gradient-1);
+            color: white;
+            padding: 4rem 0;
+            border-radius: 24px;
+            margin: 4rem 0;
+        }
+  </style>
+</head>
+
+
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>	
+<br>	
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+       <div class="container">
+           <img src="img/logo.png" width="30%" ><h6>ITEC FE Y ALEGRÍA</h6>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showSection('home')">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscripcionesdos.html" onclick="showSection('inscripciones')">
+                            <i class="fas fa-pencil-alt me-1"></i>Inscripciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logintres.html" onclick="showSection('login')">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanoscuatro.html" onclick="showSection('contacto')">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotrosseis.html" onclick="showSection('nosotros')">
+                            <i class="fas fa-users me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrerascinco.html" onclick="showSection('carreras')">
+                            <i class="fas fa-graduation-cap me-1"></i>Carreras
+                        </a>
+                    </li>
+                     <li class="nav-item" >
+                      <a  class="nav-link"  href="ar4.html" onclick="showamigos()" >
+                        <i class="fas fa-users"></i> Sitios amigos
+                      </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <br>
+<!-- Sección de Nosotros -->
+    <div id="nosotros" class="form-container">
+      <div class="container">
+       
+      
+     <label>
+       <h1  id="titulo">
+        <b>
+          RESEÑA HISTÓRICA DEL INSTITUTO SUPERIOR DE EDUCACIÓN COMERCIAL I.T.E.C. “Fe y Alegría”
+         </b>
+       </h1>
+      
+     </label>
+       
+       <img src="img/logo.png" align="right"  id="logo">
+     <p> 
+      Fe y Alegría es una institución dependiente de la Compañía de Jesús, tiene su origen en Venezuela y fue fundado en 1955 por el Rvdo. Padre José María Vélas;  en La Paz - Bolivia, en 1966 surge Fe y Alegría gracias a Humberto Portocarrero;  el 15 de abril de 1967 en la Villa Imperial, en el domicilio particular de la familia Vera, en calle 1° de mayo, se crea Fe y Alegría al servicio de los más necesitados, en diferentes ciclos.
+     </p> 
+        <img src="img/insti.png" align="left" id="inc">
+      <p>
+       Posteriormente, se crea Centros Humanísticos de capacitación técnica en diferentes ramas, uno de esos centros dependiente de la Dirección Departamental de “Fe y Alegría”, fue el Instituto Técnico Acelerado “Túpac Katari”, fundado en 1980 que funcionaba en el actual Colegio “Luis Espinal”, ahí se formaban profesionales a Nivel Técnico Medio en las carreras de Auxiliares de Contabilidad y Técnicas de Oficina. Con el transcurrir del tiempo, estas carreras no fueron satisfechas en la formación profesional del estudiante, este hecho hizo posible que el Director, Prof. Mario Mamani Morales elabore un Proyecto Académico que permita la reformulación de la malla curricular del instituto.  Fundamentado en dicho documento, el Consejo de Docentes del Centro Técnico Acelerado “Túpac Katari” se reunió el 27 de Octubre de 1989 con el único propósito de la Fundación del Instituto Superior de Educación Comercial  ISEC “Fe y Alegría”, encomendándose la iniciación de los trámites al Director del Centro en coordinación con la Dirección Departamental de Fe y Alegría, Profesora Delia Chungara de Ortega.  Después de largos trámites el CEDEC – Potosí le otorgó la Resolución Administrativa N° 22/89 de fecha 9 de Octubre de 1989, autorizándose la reformulación de la estructura curricular del Instituto.
+      </p>
+       <img src="img/in.png" align="right" id="inc">
+      <p>
+       El nuevo instituto inició sus actividades formando profesionales a Nivel Técnico Superior en las carreras de Secretariado Administrativo y Contabilidad General, después de unos años, y por una necesidad emergente, se creó la carrera de Informática. 
+      </p>  
+      <p>
+      En cumplimiento a normas establecidas, el Ministerio de Educación, Cultura y Deportes, el 9 de Septiembre de 1998 le otorga la Resolución Ministerial N° 291/98 que legaliza el funcionamiento del Instituto Superior de Educación Comercial ISEC “Fe y Alegría”, formando así profesionales con Título en Provisión Nacional  en las carreras de Secretariado Ejecutivo, Analista de Sistemas y Contabilidad General a nivel Técnico Superior.
+      </p>
+       <img src="img/final.jfif" align="left"  id="inc">
+      <p>
+      El Instituto desde su fundación ha pasado por distintos lugares alejados del centro de la ciudad, comienza sus actividades en su lugar de origen, en el actual Colegio “Luis Espinal Camps”, en la zona alta de San Cristóbal, su primer Director fue el Prof. Mario Mamani Morales, posteriormente el Instituto cumple sus funciones en el Kínder Concepción, Zona del Mercado Calvario,  era de destacar cómo los jóvenes y señoritas estudiantes ocupaban las aulas de los niños infantes, la incomodidad era sentida, allí el instituto trabajó por una sola gestión.  Por dar comodidad a los estudiantes, el instituto se traslada a la Zona de San Benito, al Instituto de Rehabilitación San Juan de Dios, allí también cumple sus actividades académicas durante una sola gestión. Posteriormente el Instituto Superior, viendo el crecimiento vegetativo del alumnado, se instala en la populosa Zona de San Pedro, en calle Beni N° 106, en dependencias de la Parroquia de San Pedro.  En éste lugar, presta sus servicios aproximadamente unos doce años, durante este tiempo y gracias al esfuerzo de los administrativos, docentes y estudiantes, se hacen varias acciones comunales para construir nuevos ambientes. 
+    </p>
+     <p>
+      
+      Después de largas gestiones administrativas, principalmente por la Dirección Departamental de “Fe y Alegría”, a la cabeza de la Profesora Elizabeth Chungara de Villalba y por una donación de la Embajada Japonesa, en la gestión del 2005, el Instituto Superior de Educación Comercial ISEC “Fe y Alegría” cuenta con su propio edificio, situado en la Av. Argentina Nº 70–A, Ciudad Satélite.
+      </p>
+        <img src="img/fin.jfif" align="right" id="inc"> 
+      <p>
+      En el actual edificio fue Rector el Prof. Fausto Cáceres Álvarez, quien cumplió satisfactoriamente durante dos años.  Posteriormente desempeña como Rectora la Dra. Betty Torres Córdova, con medidas acertadas y llevando en alto el nombre de nuestro querido instituto.
+      </p> 
+      <p>
+       Posteriormente, entre las gestiones 2015 al  2021 estuvo a la cabeza del ITEC, el connotado maestro, Lic. Freddy Gutiérrez Bayá, con quien se trabajó a satisfacción de toda la comunidad en forma unida. En la actualidad, desde la gestión 2021 se desempeña como Rector el Ing. Wilbert Erquicia Rodriguez con desempeño eficiente.
+       </p>
+     
+      <p>
+      El instituto actualmente tiene una infraestructura adecuada contando con tres Gabinetes de Informática con equipos de última generación, equipos de Ofimática para la práctica de la Carrera de Secretariado Ejecutivo, Biblioteca especializada para las carreras de Secretariado Ejecutivo, Contaduría General y Sistemas Informáticos; para el proceso enseñanza – aprendizaje se utilizan tecnologías de última generación como Data Display y Retroproyectora;  sus ambientes son cálidos, con pizarras acrílicas y una infraestructura totalmente nueva.
+      </p>
+         
+
+ </div>
+
+          <div class="container"> 
+            <div class="row" >
+             <div class="col order-md-1 "> 
+              <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="3000">
+               <div class="carousel-inner">
+                <center>
+                   <div class="carousel-item active">
+               <a href="https://www.facebook.com/itecfeyalegria?mibextid=rS40aB7S9Ucbxw6v">  <img src="img/tres.jfif"  id="car"  class="d-block w-100" style="max-height: 150px; max-width: 500px;"  ></a>
+                  </div>
+                  <div class="carousel-item ">
+                   <a href="https://www.facebook.com/itecfeyalegria?mibextid=rS40aB7S9Ucbxw6v">  <img src="img/insti.jpg" id="car"   class="d-block w-100"  style="max-height: 150px; max-width: 500px;" ></a>
+                  </div>
+                     <div class="carousel-item ">
+                          <a href="https://www.facebook.com/itecfeyalegria?mibextid=rS40aB7S9Ucbxw6v">   <img src="img/dos.png" id="car" class="d-block w-100" style="max-height: 150px ; max-width:500px;" ></a>
+                     </div>
+                     </center>
+               </div>
+             
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span >Previous</span>
+                </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"  data-bs-slide="next">
+                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                       <span class="visually-hidden">Next</span>
+                   </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     
+         
+      </div>
+   
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+</body>
+</html>
+ <script>
+    
+
+   
+
+    function showNosotros() {
+      resetContainers();
+      document.getElementById('nosotros').style.display = 'block';
+    }
+function resetContainers() {
+      document.querySelectorAll('.form-container').forEach(el => el.style.display = 'none');
+    }
+   
+  </script>

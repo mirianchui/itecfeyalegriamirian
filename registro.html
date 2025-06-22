@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	 <style type="text/css">
+        form {
+               width: 320px;
+            background: linear-gradient(to right, lightblue, lightgreen);
+            margin: auto;
+            border-radius: 5px 10px 25px 4px;
+            margin-top: 50px;
+            box-shadow: 7px 10px 20px 5px lightblue;
+            }
+        #todo {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        td {
+            padding-left: 15px;
+        }
+        #enlace:hover {
+            color: white;
+        }
+        #enlace {
+            text-decoration: none;
+        }
+         #Registro{
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+<form id="Registro">
+        <div id="todo">
+            <center>
+                <label id="titulo">REGÍSTRATE AQUÍ</label>
+            </center>
+            <br>
+            <table>
+                <tr> 
+                    <td><label>NOMBRE</label></td> 
+                    <td><input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required></td>
+                </tr>
+                <tr>
+                    <td><label>CLAVE</label></td>
+                    <td><input type="password" name="clave" id="clave" placeholder="CLAVE" required></td>
+                </tr>
+                <tr>
+                    <td><label>CORREO</label></td>
+                    <td><input type="email" name="correo" id="correo" placeholder="CORREO" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" onclick="regis()">REGISTRARSE</button></td>
+                    <td><input type="reset" value="LIMPIAR"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+	function regis() {
+ 
+            // Obtener los valores de los campos
+            var nombre = document.getElementById('nombre').value;
+            var clave = document.getElementById('clave').value;
+            var correo = document.getElementById('correo').value;
+
+            // Guardar datos en el localStorage
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('clave', clave); // Ten cuidado con almacenar contraseñas directamente
+            localStorage.setItem('correo', correo);
+
+            alert("Registro exitoso. Ahora puedes iniciar sesión.");
+            document.getElementById('Registro').reset(); // Limpiar formulario
+        };
+
+</script>

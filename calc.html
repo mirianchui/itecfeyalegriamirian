@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+        .calculadora {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            margin-bottom: 20px; /* Espacio entre la calculadora y el menú de colores */
+        }
+        .pantalla {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-align: center; /* Centrar el texto */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Incluir padding en el ancho total */
+        }
+        .tecla {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .tecla-numerica {
+            background-color: #ffb3b3; /* Color para teclas numéricas */
+        }
+        .tecla-operacion {
+            background-color: #ffcc99; /* Color para otras teclas */
+        }
+        .tecla-grande {
+            width: 110px; /* Botón "0" más grande */
+        }
+        .color-menu {
+            display: none; /* Ocultar inicialmente */
+            justify-content: center; /* Centrar horizontalmente */
+            margin-top: 20px; /* Espacio entre la calculadora y el menú de colores */
+        }
+        .color-option {
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block; /* Mostrar en fila */
+        }
+        .color-option:hover {
+            opacity: 0.7; /* Efecto hover */
+        }
+    </style>
+</head>
+<body  style="background: linear-gradient(to right, lightblue, lightgreen);">
+    <div class="calculadora" id="calculadora" style="background-color: #b2e0e6;">
+        <input type="text" class="pantalla" id="pantalla" disabled>
+        <div>
+            <button class="tecla tecla-numerica" onclick="agregar('7')">7</button>
+            <button class="tecla tecla-numerica" onclick="agregar('8')">8</button>
+            <button class="tecla tecla-numerica" onclick="agregar('9')">9</button>
+            <button class="tecla tecla-operacion" onclick="agregar('/')">/</button>
+        </div>
+        <div>
+            <button class="tecla tecla-numerica" onclick="agregar('4')">4</button>
+            <button class="tecla tecla-numerica" onclick="agregar('5')">5</button>
+            <button class="tecla tecla-numerica" onclick="agregar('6')">6</button>
+            <button class="tecla tecla-operacion" onclick="agregar('*')">*</button>
+        </div>
+        <div>
+            <button class="tecla tecla-numerica" onclick="agregar('1')">1</button>
+            <button class="tecla tecla-numerica" onclick="agregar('2')">2</button>
+            <button class="tecla tecla-numerica" onclick="agregar('3')">3</button>
+            <button class="tecla tecla-operacion" onclick="agregar('-')">-</button>
+        </div>
+        <div>
+            <button class="tecla tecla-numerica tecla-grande" onclick="agregar('0')">0</button>
+            <button class="tecla tecla-operacion" onclick="calcular()">=</button>
+            <button class="tecla tecla-operacion" onclick="agregar('+')">+</button>
+            <button class="tecla tecla-operacion" onclick="limpiar()">C</button>
+        </div>
+    </div>
+    
+    <button onclick="toggleMenu()">Mostrar Colores</button>
+    
+    <div class="color-menu" id="colorMenu">
+        <div class="color-option" onmouseover="cambiarColor('#007bff')" style="background-color: #007bff; color: white;">Azul</div>
+        <div class="color-option" onmouseover="cambiarColor('#6c757d')" style="background-color: #6c757d; color: white;">Gris</div>
+        <div class="color-option" onmouseover="cambiarColor('#ffc107')" style="background-color: #ffc107; color: black;">Amarillo</div>
+        <div class="color-option" onmouseover="cambiarColor('#28a745')" style="background-color: #28a745; color: white;">Verde</div>
+        <div class="color-option" onmouseover="cambiarColor('#343a40')" style="background-color: #343a40; color: white;">Negro</div>
+        <div class="color-option" onmouseover="cambiarColor('#dc3545')" style="background-color: #dc3545; color: white;">Rojo</div>
+    </div>
+
+    <script>
+        function agregar(valor) {
+            document.getElementById('pantalla').value += valor;
+        }
+        function calcular() {
+            const resultado = eval(document.getElementById('pantalla').value);
+            document.getElementById('pantalla').value = resultado;
+        }
+        function limpiar() {
+            document.getElementById('pantalla').value = '';
+        }
+        function toggleMenu() {
+            const menu = document.getElementById('colorMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+        function cambiarColor(color) {
+            document.getElementById('calculadora').style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

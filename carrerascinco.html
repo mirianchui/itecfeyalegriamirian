@@ -1,0 +1,668 @@
+ <!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITEC FE Y ALEGRÍA</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+   #ti,#tu,#lo{
+  color:darkred;
+}
+ h2{
+  color:darkred;
+}
+br{
+  margin: 30px;
+}
+
+ h1{
+  color: white;
+    }
+
+#todo2{
+
+  width: 1200px;
+  height: 1500px;
+  margin:auto;
+  background: transparent;
+  font-family: cursive;
+}
+table{
+
+  width:1500px;
+}
+#ini{
+  width:200px;
+  display: block;
+  transition: 01s;
+}
+
+
+img{
+  margin: 25px;
+ 
+    border-radius:12px; 
+  }
+    
+img:hover{
+    transition: 1s;
+   
+ }
+     
+
+ #carrera{
+  width:300px; 
+  border:transparent; 3px solid;
+  color:darkred; 
+}   
+
+#tab,#ma,#gen{
+  transition: 01s;
+}
+
+u{
+  color:black;
+}
+ 
+
+
+#practica{
+  color:black;
+   font-family: cursive;
+}
+
+hr{
+ margin: 28px;
+}
+ 
+ 
+    body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+         :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #f59e0b;
+            --accent-color: #a855f7;
+            --success-color: #10b981;
+            --orange-color: #f97316;
+            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --gradient-2: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            --gradient-3: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            --gradient-4: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-5: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --hero-gradient: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(168, 85, 247, 0.8) 30%, rgba(245, 158, 11, 0.8) 100%);
+        }
+    .navbar {
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+.nav-link {
+            color: #666 !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            background: rgba(59, 130, 246, 0.1);
+        }
+ section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Hidden sections for navigation */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        #home.active {
+            display: block;
+        }
+        /* Career Cards */
+        .career-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .career-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .career-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .career-content {
+            padding: 1.5rem;
+        }
+        h6 { font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            }
+
+
+            /* Cards */
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .icon-primary { background: var(--gradient-1); }
+        .icon-secondary { background: var(--gradient-5); }
+        .icon-success { background: var(--gradient-4); }
+
+        /* Action Cards */
+        .action-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            color: white;
+            text-decoration: none;
+        }
+.form-container {
+     
+      animation: fadeIn 0.7s ease-in-out;
+      padding: 10px;
+      
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+    li{ padding-left: 30px;}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .color-changing-bg {/* barra deinicio */
+      animation: colorChange 4s infinite alternate;
+      padding:5px;
+      text-align: center;
+     
+}
+
+.login-container {
+      padding: 30px;
+      border-radius: 10px;
+      margin: auto;
+      width: 50%;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .social-icons i {
+      font-size: 30px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+    .bg-footer {/* contactanos*/
+      background-size: cover;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    .menu-button:hover {
+      transform: scale(1.1);
+    }
+    .menu-button:active {
+      transform: scale(0.9); /* Efecto al hacer clic */
+    }
+  #formLogin{font-family:cursive;
+
+         background: rgba(44,62,80,0.2);
+        
+        border: 5px thistle solid;
+        margin: auto;
+        width: 720px;
+        height: 520px;
+        text-align: center;
+        border-radius:70px;
+        margin-top: 40px;
+
+        box-shadow: 8px 10px 17px 10px black;
+        cursor: pointer;
+        color: white;
+}
+ 
+
+        h1, h2 {
+            text-align: center;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+   
+#in{
+  text-decoration: none; 
+  color: white;
+  font-size: 1em;
+ }
+#in:hover {
+  text-decoration: none; 
+  color:purple;
+ 
+ }
+ 
+ .btn-gradient-purple {
+            background: var(--gradient-2);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            
+    
+        }
+
+        .btn-gradient-purple:hover {
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+            color: black;
+            text-decoration: none;
+
+
+        }
+            
+    
+
+      text-align: center;
+       
+
+        /* Statistics Section */
+        .stats-section {
+            background: var(--gradient-1);
+            color: white;
+            padding: 4rem 0;
+            border-radius: 24px;
+            margin: 4rem 0;
+        }
+   </style>
+</head>
+<body>
+
+<br>  
+<br>  <br>  
+<br>  
+<br>  <br>  
+<br>  
+<br>  <br>  
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+       <div class="container">
+           <img src="img/logo.png" width="30%" ><h6>ITEC FE Y ALEGRÍA</h6>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="showSection('home')">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscripcionesdos.html" onclick="showSection('inscripciones')">
+                            <i class="fas fa-pencil-alt me-1"></i>Inscripciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logintres.html" onclick="showSection('login')">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanoscuatro.html" onclick="showSection('contacto')">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotrosseis.html" onclick="showSection('nosotros')">
+                            <i class="fas fa-users me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrerascinco.html" onclick="showSection('carreras')">
+                            <i class="fas fa-graduation-cap me-1"></i>Carreras
+                        </a>
+                    </li>
+                     <li class="nav-item" >
+                      <a  class="nav-link"  href="ar4.html" onclick="showamigos()" >
+                        <i class="fas fa-users"></i> Sitios amigos
+                      </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <br>
+   <!-- Sección de Carreras -->
+
+    <div id="carreras" class="form-container">
+      <h2>Nuestras Carreras</h2>
+              
+      <div class="container">
+        <div class="row">
+          <div class="col order-md-1">
+            <div class="card" style="width: 18rem;">
+              <img src="img/contabilidad.jfif" class="card-img-top" alt="Contabilidad Básica" style="max-height: 880px; max-width: 700px;">
+              <div class="card-body">
+                <h5 class="card-title">CONTABILIDAD BÁSICA</h5>
+               
+               <a href="inscripcionesdos.html" onclick="showSection('inscripciones')" class="btn-gradient-purple w-100 color-changing-bg"><i class="fas fa-graduation-cap me-2"></i>Inscribirse
+                </a>
+
+    
+              </div>
+            </div>
+          </div>
+
+          <div class="col order-md-1">
+            <div class="card" style="width: 18rem;">
+              <img src="img/sis.jfif" class="card-img-top" alt="Sistemas Informáticos" style="max-height: 200px; max-width: 400px;">
+              <div class="card-body">
+                <h5 class="card-title">SISTEMAS INFORMÁTICOS</h5>
+             
+               <a href="inscripcionesdos.html" onclick="showSection('inscripciones')" class="btn-gradient-purple w-100 color-changing-bg">
+                    <i class="fas fa-graduation-cap me-2"></i>Inscribirse
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col order-md-1">
+            <div class="card" style="width: 18rem;">
+              <img src="img/iconosec.jfif" class="card-img-top" alt="Secretariado" style="max-height: 200px; max-width: 400px;">
+              <div class="card-body">
+                <h5 class="card-title">SECRETARIADO</h5>
+               
+              <a href="inscripcionesdos.html" onclick="showSection('inscripciones')" class="btn-gradient-purple w-100 color-changing-bg">
+                    <i class="fas fa-graduation-cap me-2"></i>Inscribirse
+                </a> 
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+     <hr>
+   <div>
+     <label id="sistemas"><b><h1  id="ti">SISTEMAS INFORMÁTICOS</h1></b></label>
+        <img src="img/aban.jpeg" width="300" align="left" id="carrera">
+        <p>Fe y Alegría es una organización se caracteriza como un movimiento que educativa popular y de promoción social, que tiene su origen en Venezuela y fue fundado en 1955 por el Rvdo. Padre José María Velas; después de más de una decada, en Bolivia, concretamente en la ciudad de La Paz, en 1966 surge Fe y Alegría gracias al impulso de Humberto Portocarrero; al año siguiente en la Villa Imperial, en el domicilio particular de la familia Vera, en calle 1º de mayo, frente a la unidad educativa Fray Vicente Bernedo, zona de San Roque, un 15 de abril de 1967 se crea Fe y Alegría, como una alternativa de crédito educación popular al servicio de los más necesitados, en diferentes ciclos y niveles.
+        </p>
+        <img src="img/sis.jfif" width="200" align="right" id="carrera"> 
+        
+        <p>
+         El instituto actualmente tiene una infraestructura adecuada contando con tres Gabinetes de Informatica con equipos de última generación, equipos de Ofimatica para la práctica de la Carrera de Secretariado Ejecutivo, Biblioteca especializada para las carreras de Secretariado Ejecutivo, Contabilidad General e Informatica; para el proceso enseñanza-aprendizaje se utilizan tecnologías de última generación como Data Display y Retroproyectora; sus ambientes son cálidos, con pizarras acrílicas y una infraestructura totalmente nueva. 
+         </p> 
+       
+      <ol>
+          <li><h6>CAMPO LABORAL</h6></li>
+         <label>Principales áreas de desarrollo profesional:</label>
+         <ul>
+          <li>Empresas proveedoras de soluciones de hardware y software.</li>
+          <li>Empresas dedicadas al desarrollo de tecnología para telefonía y telecomunicaciones.</li>
+          <li>Empresas que utilicen sistemas de computación en cualquiera de los sectores: gobierno, industrial, manufacturero, bancario, social, salud o telecomunicaciones, entre otros.</li>
+        </ul>
+        
+          <li><h6 >Independiente:</h1></l6>
+        <ul>
+          <li>Técnico en reparacion de Computadoras.</li>
+          <li>Solucion de Hardware y Software.</li>
+          <li>Desarrollador de Páginas web y Sistemas de Gestión.</li>
+        </ul>
+      </ol> 
+      <ul>
+        <label id="sistemas"><b><h6  >TRABAJOS  QUE  REALIZARAS</h6></b></label>
+        <br>
+        <br>
+       <li><button><a href="mj.html" id="practica">CUESTIONARIO</a></button></li>
+       <br>
+       <li><button><a href="calculadora.html" id="practica" >CALCULADORA</a></button></li>
+      </ul>
+          <br>
+      <label><h1   id="tu">SECRETARIADO EJECUTIVO</h1></label>
+        <img src="img/sec.jpg" width="300" align="right" id="carrera" >
+        <p>
+           Con los cambios en el mundo empresarial, el rol de las secretarias se fue alterando, así como las demandas a la hora de contratarlas. Al manejo del teléfono y la agenda ahora se suman tareas vinculadas con la armonización del ambiente laboral, el trabajo en equipo y el manejo y actualización en las nuevas tecnologías.
+        </p>
+        <img src="img/secret.jpg" width="180" align="left" id="carrera">
+        <p>
+           “De diez años a esta parte, el liderazgo se modificó. Hoy hay una política de Recursos Humanos diferente. Y la expectativa hacia quienes asisten a los jefes también cambió mucho”, explica Marcela Schiumerini, quien planifica la capacitación anual dirigida a asistentes ejecutivos y secretarias del grupo Secretarias y Negocios (SyN).
+        </p>
+        <p>
+           En este sentido, la experta agrega que, aparte de sus clásicas funciones operativas, actualmente las secretarias cumplen un rol fundamental en la estructura emocional de las organizaciones y en la generación de un buen clima de trabajo. Y sostiene que cada vez es más común que tengan que manejarse con varios superiores a la vez, lo cual hace que se incremente el estrés laboral. “Ya no existe tanto esa relación de uno a uno con el jefe”, señala.
+        </p>
+        <br>
+         <label><h1  id="lo">CONTABILIDAD</h1></label>
+         <img src="img/nn.jpg" width="300" align="right"  id="carrera">
+        <p>
+           La Carrera de Contabilidad y Finanzas forma gerentes de los Sistemas de Información Contable, capaces de formular y usar la información para el diseño e implementación de estrategias financieras que permiten incrementar el valor de la empresa. El Contador de UPN posee una visión moderna y globalizada acerca de la Auditoría y Consultoría para desarrollar sus actividades asumiendo una actitud ética y proactiva.
+        </p>
+       
+      <ul>
+          Para optar por el grado de bachiller en Contabilidad y Finanzas, se requiere:
+         <li>
+         
+           Haber cursado y aprobado todos los cursos del Plan de Estudios y haber cumplido con los requisitos contemplados en los Reglamentos de Estudios de la Universidad.
+         </li>
+         <li>
+          El ciclo dura 14 semanas y se efectúan 3 ciclos por año, para garantizar un aprendizaje efectivo.
+        </li>
+        <li>
+          Haber demostrado el dominio del idioma Inglés a nivel intermedio.
+        </li>
+     </ul>
+     <br>
+      <h2 >Materias que llevaras en cada materia</h2>
+        <center><table border="3"  bordercolor="chocolate" >
+        <tr><td> <h2 id="ti">SISTEMAS INFORMÁTICOS</h2>
+         
+         <ul> 
+        <label><h2 >1RO</h2></label>
+            <li>Matemática para la informática.</li>
+            <li>Programación I</li>
+            <li>Ingles técnico</li>
+            <li>Sistemas operativos</li>
+            <li>Hardware  de computadoras</li>
+            <li>Paginas web</li>
+            <li>Ofimática</li>
+        <label><h2>2DO</h2></label>
+        
+            <li>Estadística</li> 
+            <li>Programación II</li>
+            <li>Estructura de datos</li>
+            <li>Redes de computadoras</li>
+            <li>Programación para dispositivos móviles </li>
+            <li>Análisis y diseño de sistemas</li>
+            <li>Diseño y programación web</li>
+            <li>Base de datos I</li>
+        <label><h2 >3RO</h2></label>
+         <li>Emprendimiento productivo</li>
+         <li>Programación III</li>
+         <li>Gestión de software</li> 
+         <li>Redes de computadoras II</li>
+         <li>Taller de modalidades de graduación</li> 
+         <li>Análisis y diseño de sistema</li>
+         <li>Diseño y programación web</li>
+         <li>Base de datos II</li>
+        </ul>    
+  </td> 
+    <td><br><center><img src="img/sin.jpg" id="tab"></center><br></td></tr>
+        <tr><td><h2  >SECRETARIADO</h2>
+         
+        <ul> 
+        <label><h2>1RO</h2></label>
+           <li>Gestión secretaría I</li>
+            <li>Gramática normativa </li>
+            <li>Redacción y correspondencia I</li>
+            <li>Ofimática I</li>
+            <li>Documentos mercantiles y derecho laboral</li>
+            <li>Archivística física y digital Idioma originario I</li>
+            <li>Mecanografía computarizada</li>
+        
+        <label><h2 >2DO</h2></label>
+            <li>Gestión secretarial II</li>
+            <li>Inglés técnico I</li>
+            <li>Redacción y correspondencia II</li>
+            <li>Ofimática II</li>
+            <li>Contabilidad I</li>
+            <li>Relaciones humanas </li>
+            <li>Idioma originario II</li>
+        
+        <label><h2>3RO</h2></label>
+            <li>Administración organizacional Inglés técnico II</li>
+             <li>Taller de modalidades de graduación </li>
+             <li>Contabilidad II </li>
+             <li>Relaciones públicas y organización de eventos</li>
+          </ul>
+      </td>
+    <td><br><center><img src="img/sec.jpg" id="ma"></center><br></td></tr>
+        
+      <tr><td><h2  id="titulo">CONTADURÍA</h2>
+        
+         <ul> 
+           <label><h2>1RO</h2></label>
+             <li>Contabilidad I</li>
+             <li>Matemática financiera</li>
+             <li>Informática contable</li>
+             <li>Administración general</li>
+             <li>Legislación laboral y seguridad social aplicada </li>
+             <li>Economía y general aplicada</li>
+             <li>Documentos comerciales y mercantiles</li>
+             <li>Estadística aplicada</li>
+          
+           <label><h2 >2DO</h2></label>
+             <li>Contabilidad II</li>
+             <li>Contabilidad de costos I</li>
+             <li>Contabilidad de sociedades</li>
+             <li>Contabilidad de seguros</li>
+             <li>Contabilidad bancaria y cooperativas</li>
+             <li>Investigación aplicada y emprendimiento </li>
+             <li>Sistema tributario</li>
+              
+           <label><h2 >3RO</h2></label>
+            <li>Contabilidad agropecuaria</li>
+             <li>Contabilidad de costos II</li>
+             <li>Contabilidad gubernamental</li>
+             <li>Contabilidad extractiva (minera petrolera y forestal) </li>
+             <li>Contabilidad de servicios (construcción hotelería y transporte)</li> 
+             <li>Gabinete contable informático</li>
+             <li>Análisis e interpretaciones de estados financieros</li> 
+             <li>Taller de modalidades de graduación</li>
+        </ul>
+   </td>
+    <td><br><center><img src="img/ad.jpg" id="gen"></center><br></td></tr>
+       
+        </table></center>
+          <br>
+         
+          </div>
+          </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
+<script>
+   
+    function showCarreras() {
+      resetContainers();
+      document.getElementById('carreras').style.display = 'block';
+    }
+
+    function resetContainers() {
+      document.querySelectorAll('.form-container').forEach(el => el.style.display = 'none');
+    }
+
+   
+
+  </script>
